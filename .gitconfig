@@ -1,0 +1,13 @@
+[user]
+	name = mumanski
+	email = 58386912+maciej-umanski@users.noreply.github.com
+	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFb9t129Jzjr7lEiCzQYmx02D75tmWk4Lu4IpmHo233R 58386912+maciej-umanski@users.noreply.github.com
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
+[commit]
+	gpgsign = true
+	template = "~/.gitmessage"
+[init]
+	defaultBranch = master
