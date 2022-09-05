@@ -11,3 +11,7 @@
 	template = "~/.gitmessage"
 [init]
 	defaultBranch = master
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = upstream

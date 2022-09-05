@@ -1,0 +1,103 @@
+#!/bin/bash
+#
+# author: thinkofher <beniamin.dudek at yahoo.com>
+#
+# Simple bootstraping script for installing dotfiles and other
+# configuration files and scripts stored withing this repository.
+
+BACKUP_DIR=".backup"
+FILES=$(find ./dotfiles -type f | grep -v ".DS_Store")
+
+print_files() {
+    echo $FILES | tr " " "\n"
+}
+
+print_help() {
+    echo "Usage: bootstrap <command>"
+    echo
+    echo "Script for bootstraping dotfiles, configuration files"
+    echo "and different scripts."
+    echo
+    echo "Commands:"
+    echo
+    echo "    help      prints this to stdout."
+    echo
+    echo "    install   links files from this repository into users home"
+    echo "              directory. Backups conflict files in .backup at"
+    echo "              current directory."
+    echo
+    echo "    clean     removes links associated to files in this repository."
+    echo
+    echo "    restore   restores files from .backup directory."
+    echo
+    echo "    print     prints all files that will be installed."
+}
+
+install_dotfiles() {
+    mkdir -p $BACKUP_DIR
+
+    for f in $FILES
+    do
+        src=$(pwd)/${f:2}
+        target=$HOME/${f:11}
+        backup=$(pwd)/$BACKUP_DIR/${f:11}
+
+        if [ ! -f "$target" ]; then
+            mkdir -p $(dirname $target)
+            echo -n "linking "; ln -v -s $src $target
+        elif [ ! -L "$target" ]; then
+            mkdir -p $(dirname $backup)
+            echo -n "backup "; cp -v $target $backup
+
+            rm -v $target
+            echo -n "linking "; ln -v -s $src $target
+        fi
+
+    done
+}
+
+clean_dotfiles() {
+    for f in $FILES
+    do
+        target=$HOME/${f:11}
+
+        if [ -L "$target" ]; then
+            rm -v $target
+        fi
+
+    done
+}
+
+restore_backup() {
+    BACKUP_FILES=$(find $BACKUP_DIR -type f)
+    for f in $BACKUP_FILES
+    do
+        target=$HOME/${f:8}
+        if [ -L "$target" ]; then
+            rm -v $target
+        fi
+
+        mkdir -p $(dirname $target)
+        echo -n "restoring "; cp -v $f $target
+    done
+}
+
+case $1 in
+    "install")
+        install_dotfiles
+        ;;
+    "clean")
+        clean_dotfiles
+        ;;
+    "restore")
+        restore_backup
+        ;;
+    "help")
+        print_help
+        ;;
+    "print")
+        print_files
+        ;;
+    *) echo "Doesn't recognize \"$1\". Use help command for more info."
+        ;;
+esac
