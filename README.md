@@ -19,3 +19,8 @@ chmod +x ./bootstrap && ./bootstrap install
 ```shell
 brew bundle install --file=~/.brewfile
 ```
+
+## 5. run nesesery scripts
+```shell
+Chmod +x ~/.remapkeys.sh && sudo defaults write com.apple.loginwindow LoginHook ~/.remapkeys.sh
+```
