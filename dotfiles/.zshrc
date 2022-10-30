@@ -1,12 +1,8 @@
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+ZSH_THEME="robbyrussell"
 
-brewd() {
-  local dump_commands=('install' 'uninstall') # Include all commands that should do a brew dump
-  local main_command="${1}"
+# --- Plugins
+plugins=(git)
 
-  brew ${@}
-
-  for command in "${dump_commands[@]}"; do
-    [[ "${command}" == "${main_command}" ]] && brew bundle dump --file="${HOME}/.brewfile" --force
-  done
-}
+# --- Sources
+source $ZSH/oh-my-zsh.sh
+source $HOME/.zshfunc

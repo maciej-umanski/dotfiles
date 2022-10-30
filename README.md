@@ -10,17 +10,25 @@
 git clone https://github.com/maciej-umanski/dotfiles.git
 ```
 
-## 3. run bootstrap script
+## 3. install oh-my-zsh
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## 4. run bootstrap script
 ```shell
 chmod +x ./bootstrap && ./bootstrap install
 ```
 
-## 4. run homebrew dump recovery
+## 5. run homebrew dump recovery
 ```shell
 brew bundle install --file=~/.brewfile
 ```
 
-## 5. run nesesery scripts
+## 6. run nesesery scripts
 ```shell
-Chmod +x ~/.remapkeys.sh && sudo defaults write com.apple.loginwindow LoginHook ~/.remapkeys.sh
+Chmod +x ./scripts/remapkeys.sh && sudo defaults write com.apple.loginwindow LoginHook ./scripts/remapkeys.sh
 ```
+
+# TODO
+* Create handy-dandy script to install all the nonsense above
