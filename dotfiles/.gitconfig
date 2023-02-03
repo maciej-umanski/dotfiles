@@ -33,3 +33,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[alias]
+	quickfix = !git add . && git commit -m \"quickfix\" && git push

@@ -1,4 +1,5 @@
-ZSH_THEME="lukerandall"
+#ZSH_THEME="lukerandall"
+ZSH_THEME="arrow"
 
 # Plugins
 plugins=(
@@ -13,3 +14,6 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshfunc
 source $HOME/.zshalias
+
+# Other
+eval $(thefuck --alias)
