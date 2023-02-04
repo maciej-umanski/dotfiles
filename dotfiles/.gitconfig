@@ -1,7 +1,7 @@
 [user]
 	name = mumanski
-	email = 58386912+maciej-umanski@users.noreply.github.com
-	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFb9t129Jzjr7lEiCzQYmx02D75tmWk4Lu4IpmHo233R 58386912+maciej-umanski@users.noreply.github.com
+	email = umanski.maciej@gmail.com
+	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFb9t129Jzjr7lEiCzQYmx02D75tmWk4Lu4IpmHo233R
 [gpg]
 	format = ssh
 [gpg "ssh"]
@@ -13,25 +13,7 @@
 	defaultBranch = master
 [core]
 	excludesfile = ~/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
 	default = upstream
-[interactive]
-	diffFilter = diff-so-fancy --patch
-[color]
-	ui = true
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	func = 146 bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
 [alias]
 	quickfix = !git add . && git commit -m \"quickfix\" && git push
