@@ -1,5 +1,4 @@
-#ZSH_THEME="lukerandall"
-ZSH_THEME="arrow"
+ZSH_THEME="eastwood"
 
 # Plugins
 plugins=(
