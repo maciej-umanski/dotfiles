@@ -1,19 +1,21 @@
 # Installation
-1. [Install homebrew](https://brew.sh/index_pl)
-2. [Install Oh-my-zsh](https://ohmyz.sh)
-3. Bind dotfiles
-    ```shell
-    ./bootstrap install
-    ```
-4. Install homebrew packages
+1. [Enable Linux in Chromebook](https://chromeos.dev/en/linux/setup)
+2. Launch and update linux installation
    ```shell
-   brew bundle install --file=~/.brewfile
+   sudo apt update && sudo apt upgrade -y && sudo dist-upgrade -y
    ```
-5. Remapkeys on startup
-   * start Automator.app
-   * select Application
-   * add Run shell script (from the Actions/Utilities)
-   * copy & paste your script into the window (remapkeys.sh)
-   * save somewhere (for example you can make an Applications folder in your HOME, you will get an your_name.app)
-   * go to System Preferences -> Users & Groups -> Login items (or System Preferences -> Accounts -> Login items / depending of your MacOS version)
-   * add this app
+2. Install zsh
+   ```shell
+   sudo apt install zsh
+   ```
+3. [Install Oh-my-zsh](https://ohmyz.sh)
+4. install used plugins
+   ```shell
+   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+   ```
+4. Bind dotfiles
+   ```shell
+   ./bootstrap install
+   ```

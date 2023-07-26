@@ -1,2 +1,0 @@
-# Homebrew package manager
-eval "$(/opt/homebrew/bin/brew shellenv)"

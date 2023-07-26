@@ -5,10 +5,10 @@ plugins=(
 	git
 	docker
 	web-search
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 # Sources
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshfunc
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

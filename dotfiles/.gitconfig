@@ -1,7 +1,7 @@
 [user]
 	name = mumanski
 	email = umanski.maciej@gmail.com
-	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFb9t129Jzjr7lEiCzQYmx02D75tmWk4Lu4IpmHo233R
+	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6FnslkRbwRji2tn+NOgs53kWpEUwKhGVbD7mknCwB6
 [gpg]
 	format = ssh
 [gpg "ssh"]
@@ -10,10 +10,10 @@
 	gpgsign = true
 	template = "~/.gitmessage"
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore_global
 [push]
 	default = upstream
 [alias]
-	quickfix = !git add . && git commit -m \"quickfix\" && git push
+	quickfix = !git add . && git commit -m \"fix: quickfix\" && git push
