@@ -3,13 +3,21 @@
 2. [Install Oh-my-zsh](https://ohmyz.sh)
 3. Bind dotfiles
     ```shell
-    ./bootstrap install
+    chmod +x ./bootstrap && ./bootstrap install
     ```
 4. Install homebrew packages
    ```shell
    brew bundle install --file=~/.brewfile
    ```
-5. Remapkeys on startup
+5. Add ssh key password to keychain
+   ```shell
+   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+   ```
+6. Disable delay on dock show
+   ```shell
+   defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+   ```
+7. Remapkeys on startup
    * start Automator.app
    * select Application
    * add Run shell script (from the Actions/Utilities)
