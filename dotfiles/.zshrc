@@ -3,8 +3,6 @@ ZSH_THEME="eastwood"
 # Plugins
 plugins=(
 	git
-	docker
-	web-search
 )
 
 # Sources

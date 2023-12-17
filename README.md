@@ -3,7 +3,7 @@
 2. [Install Oh-my-zsh](https://ohmyz.sh)
 3. Bind dotfiles
     ```shell
-    chmod +x ./bootstrap && ./bootstrap install
+    ./bootstrap install
     ```
 4. Install homebrew packages
    ```shell
