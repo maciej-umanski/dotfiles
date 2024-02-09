@@ -1,4 +1,4 @@
-ZSH_THEME="eastwood"
+ZSH_THEME="theunraveler"
 
 # Plugins
 plugins=(
