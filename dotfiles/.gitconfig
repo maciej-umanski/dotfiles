@@ -1,5 +1,5 @@
 [user]
-	name = mumanski
+	name = maciej-umanski
 	email = umanski.maciej@gmail.com
 	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFb9t129Jzjr7lEiCzQYmx02D75tmWk4Lu4IpmHo233R
 [gpg]
@@ -10,7 +10,7 @@
 	gpgsign = true
 	template = "~/.gitmessage"
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore_global
 [push]
