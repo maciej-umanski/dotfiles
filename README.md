@@ -1,4 +1,5 @@
 # Installation
+0. Pull this repository with `--recursive` parameter
 1. [Install homebrew](https://brew.sh/index_pl)
 2. [Install Oh-my-zsh](https://ohmyz.sh)
 3. Bind dotfiles
