@@ -1,24 +1,28 @@
 # Installation
-0. Pull this repository with `--recursive` parameter
-1. [Install homebrew](https://brew.sh/index_pl)
-2. [Install Oh-my-zsh](https://ohmyz.sh)
-3. Bind dotfiles
+1. Pull this repository with `--recursive` parameter
+2. [Install homebrew](https://brew.sh/index_pl)
+3. [Install Oh-my-zsh](https://ohmyz.sh)
+4. Bind dotfiles
     ```shell
     bootstrap install
     ```
-4. Install homebrew packages
+5. Install homebrew packages
    ```shell
    brew bundle install --file=~/.brewfile
    ```
-5. Disable delay on dock show
+6. Disable delay on dock show
    ```shell
    defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
    ```
-6. Install vim plugins
+7. Install vim plugins
    ```shell
    vim -u NONE -c "helptags vim-gitgutter/doc" -c q
    ```
-7. Set up autorun script
+8. Add ssh key to ssh-agent
+   ```shell
+   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+   ```
+9.Set up autorun script
    * start Automator.app
    * select Application
    * add Run shell script (from the Actions/Utilities)

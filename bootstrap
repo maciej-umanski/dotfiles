@@ -9,13 +9,13 @@ BACKUP_DIR=".backup"
 FILES=$(find ./dotfiles -type f | grep -v ".DS_Store")
 
 print_files() {
-    echo $FILES | tr " " "\n"
+    echo "$FILES" | tr " " "\n"
 }
 
 print_help() {
     echo "Usage: bootstrap <command>"
     echo
-    echo "Script for bootstraping dotfiles, configuration files"
+    echo "Script for bootstrapping dotfiles, configuration files"
     echo "and different scripts."
     echo
     echo "Commands:"
@@ -43,14 +43,14 @@ install_dotfiles() {
         backup=$(pwd)/$BACKUP_DIR/${f:11}
 
         if [ ! -f "$target" ]; then
-            mkdir -p $(dirname $target)
-            echo -n "linking "; ln -v -s $src $target
+            mkdir -p "$(dirname "$target")"
+            echo -n "linking "; ln -v -s "$src" "$target"
         elif [ ! -L "$target" ]; then
-            mkdir -p $(dirname $backup)
-            echo -n "backup "; cp -v $target $backup
+            mkdir -p "$(dirname "$backup")"
+            echo -n "backup "; cp -v "$target" "$backup"
 
-            rm -v $target
-            echo -n "linking "; ln -v -s $src $target
+            rm -v "$target"
+            echo -n "linking "; ln -v -s "$src" "$target"
         fi
 
     done
@@ -62,7 +62,7 @@ clean_dotfiles() {
         target=$HOME/${f:11}
 
         if [ -L "$target" ]; then
-            rm -v $target
+            rm -v "$target"
         fi
 
     done
@@ -74,11 +74,11 @@ restore_backup() {
     do
         target=$HOME/${f:8}
         if [ -L "$target" ]; then
-            rm -v $target
+            rm -v "$target"
         fi
 
-        mkdir -p $(dirname $target)
-        echo -n "restoring "; cp -v $f $target
+        mkdir -p "$(dirname "$target")"
+        echo -n "restoring "; cp -v "$f" "$target"
     done
 }
 
