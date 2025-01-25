@@ -1,6 +1,6 @@
 # Installation
 1. Pull this repository with `--recursive` parameter
-2. [Install homebrew](https://brew.sh/index_pl)
+2. [Install homebrew](https://brew.sh)
 3. [Install Oh-my-zsh](https://ohmyz.sh)
 4. Bind dotfiles
     ```shell
@@ -14,15 +14,11 @@
    ```shell
    defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
    ```
-7. Install vim plugins
-   ```shell
-   vim -u NONE -c "helptags vim-gitgutter/doc" -c q
-   ```
-8. Add ssh key to ssh-agent
+7. Add ssh key to ssh-agent
    ```shell
    ssh-add --apple-use-keychain ~/.ssh/id_ed25519
    ```
-9.Set up autorun script
+8. Set up autorun script
    * start Automator.app
    * select Application
    * add Run shell script (from the Actions/Utilities)

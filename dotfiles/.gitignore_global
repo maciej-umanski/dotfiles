@@ -4,3 +4,7 @@
 # Vim
 *~
 *.swp
+
+# so I can have somewhere to make notes/lists that I don't want committed, in any repo
+.todo
+.notes
