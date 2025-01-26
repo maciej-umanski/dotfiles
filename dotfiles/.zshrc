@@ -9,4 +9,5 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshfunc
 source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH/custom/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
