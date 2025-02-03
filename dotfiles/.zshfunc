@@ -5,6 +5,6 @@ brewd() {
   brew ${@}
 
   for command in "${dump_commands[@]}"; do
-    [[ "${command}" == "${main_command}" ]] && brew bundle dump --file="${HOME}/.brewfile" --force
+    [[ "${command}" == "${main_command}" ]] && brew bundle dump --file="${HOME}/.brewfile" --force --no-vscode
   done
 }
