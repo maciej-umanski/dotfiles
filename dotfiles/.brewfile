@@ -1,17 +1,39 @@
-brew "colima"
-brew "docker"
-brew "docker-compose"
+tap "hashicorp/tap"
+tap "ws/brlaser", trusted: true
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Distributed revision control system
 brew "git"
+# Mac App Store command-line interface
+brew "mas"
+# AI coding agent, built for the terminal
+brew "opencode"
+# Terraform
+brew "hashicorp/tap/terraform", trusted: true
+# Application uninstaller
+cask "appcleaner"
+# Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-cask "firefox"
+# CUPS driver for Brother laser printers
+cask "ws/brlaser/brlaser"
+# Utility that prevents the system from going to sleep
+cask "caffeine"
+# IDE for Java development - community edition
+cask "intellij-idea-ce"
+# Menu bar calendar
 cask "itsycal"
-cask "lm-studio"
-cask "logi-options+"
+# Tool to control external monitor brightness & volume
 cask "monitorcontrol"
-cask "netnewswire"
-cask "omnidisksweeper"
+# VPN client focusing on security
 cask "protonvpn"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
+# Text editor for code, markup and prose
 cask "sublime-text"
-cask "sweet-home3d"
-cask "utm"
-cask "webstorm"
+# Unpacks archive files
+cask "the-unarchiver"
+# Administration tool for MikroTik RouterOS
+cask "winbox"
+mas "AdGuard Mini", id: 1440147259
+mas "Numbers", id: 361304891
+mas "WireGuard", id: 1451685025

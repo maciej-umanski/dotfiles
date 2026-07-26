@@ -1,7 +1,7 @@
 [user]
 	name = maciej-umanski
 	email = umanski.maciej@gmail.com
-	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFb9t129Jzjr7lEiCzQYmx02D75tmWk4Lu4IpmHo233R
+	signingKey = ~/.ssh/id_ed25519.pub
 [gpg]
 	format = ssh
 [gpg "ssh"]
@@ -13,7 +13,11 @@
 	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = "vim"
+	autocrlf = input
 [push]
 	default = upstream
+	autoSetupRemote = true
 [alias]
 	quickfix = !git add . && git commit -m \"quickfix\" && git push
+	datefix = !git commit --amend --date=now --no-edit
